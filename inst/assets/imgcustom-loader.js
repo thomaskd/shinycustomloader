@@ -1,5 +1,5 @@
 /* When recalculating starts, show the loader container & hide the output */
-$(document).on('shiny:recalculating', function(event) {
+$(document).on('shiny:recalculating shiny:outputinvalidated', function(event) {
     $(".recalculating").siblings(".load-container, .shiny-loader-placeholder").show();
     $(".recalculating").siblings(".load-container").siblings('.shiny-bound-output, .shiny-output-error').css('visibility', 'hidden');
     // if there is a proxy div, hide the previous output
