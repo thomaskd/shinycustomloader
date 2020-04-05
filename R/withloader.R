@@ -110,7 +110,7 @@ withLoader <- function(ui_element,
 renderCSS <- function(type, loader) {
   proxy_element <- shiny::tagList()
   if (type=="html"){
-    if(loader %in% c("dnaspin", "pacman", "loader1", "loader2", "loader3", "loader4", "loader5",
+    if(loader %in% c("vulexmap", "dnaspin", "pacman", "loader1", "loader2", "loader3", "loader4", "loader5",
                      "loader6", "loader7", "loader8", "loader9", "loader10", "loaders")) {
       htmlfile <- system.file(package='shinycustomloader', paste0("css-loaders/html/", loader, ".html"))
       shiny::tagList(shiny::singleton(shiny::tags$head(shiny::tags$link(rel = "stylesheet",
