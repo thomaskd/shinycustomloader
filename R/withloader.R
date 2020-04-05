@@ -45,7 +45,7 @@ withLoader <- function(ui_element,
                               shiny::div(class = "load-container",shiny::img(class = "loader-img", src = loader)), proxy_element, ui_element))
   }
   else if (type=="html"){
-    if(loader %in% c("dnaspin", "pacman", "loader1", "loader2", "loader3", "loader4", "loader5",
+    if(loader %in% c("vulexmap", "dnaspin", "pacman", "loader1", "loader2", "loader3", "loader4", "loader5",
                      "loader6", "loader7", "loader8", "loader9", "loader10")) {
       htmlfile <- system.file(package='shinycustomloader', paste0("css-loaders/html/", loader, ".html"))
       shiny::tagList(shiny::singleton(shiny::tags$head(shiny::tags$link(rel = "stylesheet", type="text/css",
